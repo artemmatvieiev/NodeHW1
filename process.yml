@@ -1,0 +1,10 @@
+apps:
+  - script: "./src/index.js"
+    name: test
+    exec_mode: cluster
+    instances: max
+    watch: true
+    ignore_watch: ["./node_modules/*", "./logs/*"]
+    log_date_format: "YYYY-MM-DD HH:mm Z"
+    error_file: ./logs/errors.log
+    out_file: ./logs/out.log
